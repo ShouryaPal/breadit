@@ -9,7 +9,7 @@ import axios from 'axios'
 import { MessageSquare } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { FC, useRef, useState } from 'react'
-// import CommentVotes from '../CommentVotes'
+import CommentVotes from './CommentVotes'
 import { Button } from './ui/Button'
 import { Label } from './ui/Label'
 import { Textarea } from './ui/Textarea'
@@ -90,11 +90,11 @@ const PostComment: FC<PostCommentProps> = ({
             <p className='text-sm text-zinc-900 mt-2'>{comment.text}</p>
 
             <div className='flex gap-2 items-center'>
-                {/* <CommentVotes
+                <CommentVotes
                     commentId={comment.id}
                     votesAmt={votesAmt}
                     currentVote={currentVote}
-                /> */}
+                />
 
                 <Button
                     onClick={() => {
